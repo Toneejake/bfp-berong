@@ -49,7 +49,7 @@ export function Chatbot() {
         setMessages([
           {
             id: "1",
-            text: "Hello! I'm the BFP Sta Cruz assistant. How can I help you with fire safety today?",
+            text: "Hello! I'm Berong the BFP Sta Cruz assistant. How can I help you with fire safety today?",
             sender: "bot",
             timestamp: new Date(),
           }

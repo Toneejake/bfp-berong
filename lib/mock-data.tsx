@@ -183,7 +183,7 @@ export const bfpInfo = {
     "The Bureau of Fire Protection Sta Cruz is committed to serving our community with excellence in fire prevention, suppression, and emergency response. Our dedicated team of firefighters works around the clock to ensure the safety and security of our citizens.",
   contact: {
     address: "BFP Sta Cruz Fire Station, Sta Cruz, Philippines",
-    phone: "(02) 8888-0000",
+    phone: "(𝟎𝟒𝟗) 𝟖𝟎𝟖-𝟐𝟐𝟕𝟖",
     emergency: "911",
     email: "bfp.stacruz@bfp.gov.ph",
   },
