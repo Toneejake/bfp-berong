@@ -118,10 +118,12 @@ export default function AdultPage() {
               <p className="text-muted-foreground mb-4 text-pretty">
                 Interactive tool to visualize how fire spreads in different environments and conditions.
               </p>
-              <Button className="bg-secondary hover:bg-secondary/90 text-secondary-foreground">
-                Launch Simulator
-                <ArrowRight className="h-4 w-4 ml-2" />
-              </Button>
+              <Link href="/adult/simulation">
+                <Button className="bg-secondary hover:bg-secondary/90 text-secondary-foreground">
+                  Launch Simulator
+                  <ArrowRight className="h-4 w-4 ml-2" />
+                </Button>
+              </Link>
             </CardContent>
           </Card>
         </div>
