@@ -124,7 +124,7 @@ export default function HomePage() {
         </section>
 
         {/* Learning Sections */}
-        <section className="mb-12">
+        {/* <section className="mb-12">
           <h2 className="text-3xl font-bold text-center mb-8 text-foreground">Explore Our Learning Sections</h2>
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             {(!isAuthenticated || user?.permissions.accessProfessional) && (
@@ -196,7 +196,7 @@ export default function HomePage() {
               </Link>
             )}
           </div>
-        </section>
+        </section> */}
 
         {/* Contact Information */}
         <section>

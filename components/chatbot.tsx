@@ -1,10 +1,16 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { MessageCircle, X, Send } from "lucide-react"
+
+interface QuickQuestion {
+  id: string
+  question: string
+  category: string
+}
 
 interface Message {
   id: string
@@ -24,6 +30,44 @@ export function Chatbot() {
     },
   ])
   const [inputValue, setInputValue] = useState("")
+  const [quickQuestions, setQuickQuestions] = useState<Record<string, QuickQuestion[]>>({})
+  const [loadingQuestions, setLoadingQuestions] = useState(true)
+
+  // Load quick questions when the component mounts
+  useEffect(() => {
+    const loadQuickQuestions = async () => {
+      try {
+        const response = await fetch('/api/quick-questions')
+        if (response.ok) {
+          const questions = await response.json()
+          setQuickQuestions(questions)
+        }
+      } catch (error) {
+        console.error('Error loading quick questions:', error)
+      } finally {
+        setLoadingQuestions(false)
+      }
+    }
+
+    if (isOpen) {
+      // Add initial welcome message when the chatbot opens
+      if (messages.length === 0) {
+        setMessages([
+          {
+            id: "1",
+            text: "Hello! I'm Berong the BFP Sta Cruz assistant. How can I help you with fire safety today?",
+            sender: "bot",
+            timestamp: new Date(),
+          }
+        ])
+      }
+
+      // Load quick questions if not already loaded
+      if (Object.keys(quickQuestions).length === 0) {
+        loadQuickQuestions()
+      }
+    }
+  }, [isOpen, messages.length, quickQuestions])
 
   const handleSend = () => {
     if (!inputValue.trim()) return

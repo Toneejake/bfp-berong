@@ -21,7 +21,7 @@ export function Navigation() {
             <div className="flex items-center gap-4">
               <div className="flex items-center gap-3">
                 <Image
-                  src="/bfp-logo-red.jpg"
+                  src="/bfp logo.png"
                   alt="Bureau of Fire Protection Logo"
                   width={60}
                   height={60}
@@ -41,7 +41,7 @@ export function Navigation() {
             {/* Right Section - Philippine Seal & Time */}
             <div className="flex items-center gap-4">
               <Image
-                src="/philippine-flag-seal.jpg"
+                src="/stacruz.png"
                 alt="Republic of the Philippines Seal"
                 width={50}
                 height={50}
@@ -73,9 +73,13 @@ export function Navigation() {
             {/* Logo Section */}
             <div className="flex items-center gap-3">
               <div className="flex items-center gap-2">
-                <div className="bg-red-700 text-white px-3 py-2 rounded-lg">
-                  <span className="text-lg font-bold">BFP</span>
-                </div>
+                  <Image
+                    src="/RD Logo.png"
+                    alt="RD Logo"
+                    width={50}
+                    height={50}
+                    className="object-contain"
+                  />
                 <div>
                   <h2 className="text-base font-bold text-red-700">Berong E-Learning</h2>
                   <p className="text-xs text-gray-600">Fire Safety Education Platform</p>
@@ -142,6 +146,10 @@ export function Navigation() {
                     <p className="text-sm font-semibold text-gray-900">{user?.name}</p>
                     <p className="text-xs text-gray-600 capitalize">{user?.role}</p>
                   </div>
+                  {/*Notification Settings*/}
+                  <Button variant="outline" size="icon" className="border-red-200 text-red-700 hover:bg-red-50">
+                    
+                  </Button>
                   <Button variant="outline" size="icon" className="border-red-200 text-red-700 hover:bg-red-50">
                     <User className="h-4 w-4" />
                   </Button>
